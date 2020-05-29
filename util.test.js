@@ -18,9 +18,7 @@ test('should create an element with text and correct class', async () => {
     // args: ['--window-size=1920,1080']
   });
   const page = await browser.newPage();
-  await page.goto(
-    'file:///Users/mschwarzmueller/development/teaching/youtube/js-testing/index.html'
-  );
+  await page.goto('file://' + __dirname + '/index.html');
   await page.click('input#name');
   await page.type('input#name', 'Anna');
   await page.click('input#age');
